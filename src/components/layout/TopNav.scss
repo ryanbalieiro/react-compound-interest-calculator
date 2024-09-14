@@ -29,7 +29,7 @@
             &:not(:last-child) {
                 margin-right: 30px;
                 @include  media-breakpoint-down(sm) {
-                    margin-right: 15px;
+                    margin-right: 7.5px;
                 }
             }
         }

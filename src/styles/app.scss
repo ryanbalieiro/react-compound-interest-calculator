@@ -3,6 +3,10 @@
 // importing bootstrap
 @import 'node_modules/bootstrap/scss/bootstrap';
 
+html {
+    background-color: $dark;
+}
+
 @import "customs";
 @import "typography";
 @import "utils";

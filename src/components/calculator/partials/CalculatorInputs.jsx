@@ -31,6 +31,10 @@ function CalculatorInputs({className, initialValues, editable, validation, canCa
     }
 
     const _setInputValueForField = (field, value, forceUpdate) => {
+        if(value.charAt(value.length - 1) === ',') {
+            value = value.substring(0, value.length - 1) + '.'
+        }
+
         _setFormValue(field.id, utils.cleanNumericInputString(
             value,
             field.range[0],
@@ -128,6 +132,7 @@ function CalculatorInputs({className, initialValues, editable, validation, canCa
 
                     <InputWrapper   type={`text`}
                                     placeholder={_getPlaceHolderForField(field)}
+                                    numeric={true}
                                     disabled={!editable}
                                     value={ _getInputValueForField(field) }
                                     onValueChanged={(newValue, didLoseFocus) => {

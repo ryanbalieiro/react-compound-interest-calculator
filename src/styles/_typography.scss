@@ -1,6 +1,6 @@
 /** Headings **/
 $heading-sizes: (
-    h1: (default: 2.75rem, xl: 2.60rem, md: 2.30rem),
+    h1: (default: 2.75rem, xl: 2.60rem, md: 2.20rem),
     h2: (default: 2.50rem, xl: 2.40rem, md: 2.10rem),
     h3: (default: 2.00rem, xl: 1.90rem, md: 1.70rem),
     h4: (default: 1.50rem, xl: 1.40rem, md: 1.275rem),
@@ -44,15 +44,15 @@ $text-sizes: (
 }
 
 @each $heading, $size in $heading-sizes {
-    #{$heading} {
-        font-size: map-get($size, default);
+    #{$heading}, .#{$heading} {
+        font-size: map-get($size, default)!important;
 
         @include media-breakpoint-down(xl) {
-            font-size: map-get($size, xl);
+            font-size: map-get($size, xl)!important;
         }
 
         @include media-breakpoint-down(md) {
-            font-size: map-get($size, md);
+            font-size: map-get($size, md)!important;
         }
     }
 }

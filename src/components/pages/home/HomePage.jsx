@@ -23,7 +23,7 @@ const HomePage = () => {
                         subtitle="Find out how your investment will grow over time:"/>
 
             <PageSection>
-                <Calculator className={`mt-3`}
+                <Calculator className={`mt-0 mt-lg-3`}
                         editable={true}
                         paramsBundle={_getInitialParams()}
                         onParamsChanged={_onCalculatorParamsChanged}/>
