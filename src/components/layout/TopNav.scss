@@ -1,0 +1,53 @@
+@import "/src/styles/theming";
+
+.custom-navbar {
+    background-color: $primary;
+    color: $white;
+    min-height: $navbar-height;
+
+    display: flex;
+    align-items: center;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-link-list {
+        .item {
+            color: white;
+            text-decoration: none;
+            font-family: $custom-subheadings-font-family;
+            opacity: 0.5;
+            position: relative;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &:not(:last-child) {
+                margin-right: 30px;
+                @include  media-breakpoint-down(sm) {
+                    margin-right: 15px;
+                }
+            }
+        }
+
+        .fa-icon {
+            color: white;
+            @include media-breakpoint-down(md) {
+                min-width: 30px;
+            }
+        }
+
+        span {
+            color: white;
+        }
+
+        .active {
+            opacity: 1!important;
+            padding-bottom: 0.35em;
+        }
+    }
+}

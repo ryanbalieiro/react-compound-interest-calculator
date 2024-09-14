@@ -1,0 +1,92 @@
+@import "/src/styles/theming";
+
+ul.social-links {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li.social-link-wrapper {
+    display: inline-block;
+}
+
+@mixin create-btn-social-size($std-font-size, $md-down-font-size) {
+    $font-size: $std-font-size;
+
+    font-size: $font-size;
+    width: calc($font-size * 2.4);
+    height: calc($font-size * 2.4);
+
+    @include media-breakpoint-down(md) {
+        font-size: $md-down-font-size;
+        width: calc($md-down-font-size * 2.4);
+        height: calc($md-down-font-size * 2.4);
+    }
+}
+
+@mixin create-btn-social-color($color, $bg-color, $border-color, $hover-color, $hover-bg-color, $hover-border-color) {
+    color: $color;
+    background-color: $bg-color;
+    border-color: $border-color;
+
+    &:hover {
+        color: $hover-color;
+        background-color: $hover-bg-color;
+        border-color: $hover-border-color;
+    }
+}
+
+a.btn-social {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+
+    border-radius: 100%;
+    border: 2px solid white;
+    color: $white;
+    transition: 0.2s all ease-out;
+
+    @include create-btn-social-size(1.4rem, 1.2rem);
+    @include create-btn-social-color(
+        $white, $dark, $white,
+        lighten($primary, 30%), $white, $white,
+    )
+}
+
+.btn-social-tooltip {
+    position: absolute;
+    margin-top: -100px;
+
+    background-color: lighten($primary, 10%);
+    font-weight: bold;
+    text-transform: capitalize;
+    color: white;
+    font-size: 0.65em;
+
+    padding: 0.2rem 0.6rem;
+    border-radius: 10px;
+    display: none;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: lighten($primary, 10%) transparent transparent transparent;
+    }
+}
+
+a.btn-social:hover {
+    .btn-social-tooltip {
+        @include media-breakpoint-up(md) {
+            display: block !important;
+        }
+    }
+}

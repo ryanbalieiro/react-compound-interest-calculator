@@ -1,0 +1,64 @@
+/** Headings **/
+$heading-sizes: (
+    h1: (default: 2.75rem, xl: 2.60rem, md: 2.30rem),
+    h2: (default: 2.50rem, xl: 2.40rem, md: 2.10rem),
+    h3: (default: 2.00rem, xl: 1.90rem, md: 1.70rem),
+    h4: (default: 1.50rem, xl: 1.40rem, md: 1.275rem),
+    h5: (default: 1.30rem, xl: 1.25rem, md: 1.10rem),
+    h6: (default: 1.10rem, xl: 1.05rem, md: 0.95rem),
+);
+
+/** Standard Texts **/
+$text-sizes: (
+    display-1: (default: 3.25rem, xl: 3.00rem, md: 2.75rem),
+    display-2: (default: 3.50rem, xl: 3.25rem, md: 3.00rem),
+    display-3: (default: 3.75rem, xl: 3.50rem, md: 3.25rem),
+    display-4: (default: 4.00rem, xl: 3.80rem, md: 3.50rem),
+    display-5: (default: 5.00rem, xl: 4.75rem, md: 4.25rem),
+
+    lead:   (default: 1.20rem, xl: 1.14rem, md: 1.00rem),
+    lead-2: (default: 1.40rem, xl: 1.33rem, md: 1.25rem),
+    lead-3: (default: 1.75rem, xl: 1.66rem, md: 1.50rem),
+    lead-4: (default: 2.25rem, xl: 2.15rem, md: 2.05rem),
+
+    text-1: (default: 0.85rem, xl: 0.80rem, md: 0.725rem),
+    text-2: (default: 0.90rem, xl: 0.85rem, md: 0.75rem),
+    text-3: (default: 0.95rem, xl: 0.90rem, md: 0.80rem),
+    text-4: (default: 1.00rem, xl: 0.95rem, md: 0.85rem),
+    text-5: (default: 1.05rem, xl: 1.00rem, md: 0.90rem),
+);
+
+
+@each $text, $size in $text-sizes {
+    .#{$text} {
+        font-size: map-get($size, default);
+
+        @include media-breakpoint-down(xl) {
+            font-size: map-get($size, xl);
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: map-get($size, md);
+        }
+    }
+}
+
+@each $heading, $size in $heading-sizes {
+    #{$heading} {
+        font-size: map-get($size, default);
+
+        @include media-breakpoint-down(xl) {
+            font-size: map-get($size, xl);
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: map-get($size, md);
+        }
+    }
+}
+
+/** Custom classes **/
+.text-custom-subheading {
+    font-family: $custom-subheadings-font-family;
+}
+

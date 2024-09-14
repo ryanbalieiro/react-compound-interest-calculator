@@ -1,0 +1,4 @@
+// This file can be imported into a component-specific scss file in order to access bootstrap/custom styling variables/resources.
+@import './variables';
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import "customs";

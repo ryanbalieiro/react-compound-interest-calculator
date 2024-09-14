@@ -1,0 +1,44 @@
+@import "/src/styles/theming";
+
+.calculator {
+    display: flex;
+    padding: 20px 0;
+    @include media-breakpoint-down(xl) {
+        flex-direction: column;
+    }
+
+    .calculator-input-wrapper {
+        min-width: 330px;
+        @include media-breakpoint-down(xl) {
+            width: 100%;
+        }
+        @include media-breakpoint-down(sm) {
+            min-width: auto;
+        }
+    }
+
+    .calculator-result-wrapper {
+        width: 100%;
+        border-left: 2px dotted darken($card-focus-color, 5%);
+        margin-left: 25px;
+        padding-left: 25px;
+        overflow-x: auto;
+    }
+
+    .calculator-result-wrapper-with-xl-border {
+        @include media-breakpoint-down(xl) {
+            border: none;
+            border-top: 2px dotted darken($card-focus-color, 5%);
+            margin: 10px 0 0;
+            padding: 25px 0 0;
+        }
+    }
+
+    .calculator-result-wrapper-without-xl-border {
+        @include media-breakpoint-down(xl) {
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
