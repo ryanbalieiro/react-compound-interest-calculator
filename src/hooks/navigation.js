@@ -8,7 +8,7 @@ export const useNavigation = () => {
     const assets = useAssets()
     const location = useLocation()
 
-    const repoUrl = 'https://ryanbalieiro.github.io/compound-interest-calculator/'
+    const repoUrl = 'https://github.com/ryanbalieiro/react-compound-interest-calculator'
 
     const [navLinks] = useState([
         {

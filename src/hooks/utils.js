@@ -35,6 +35,7 @@ export const useUtils = () => {
         if(maxDecimals > 0) {
             cleanedValue = addThousandsSeparator(cleanedValue)
         }
+
         return cleanedValue.toString()
     }
 

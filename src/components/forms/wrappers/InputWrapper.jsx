@@ -7,7 +7,6 @@ function InputWrapper({type, placeholder, numeric, disabled, value, onValueChang
         inputMode = "decimal"
     }
 
-
     const _onChange = (e) => {
         onValueChanged(e.target.value, false)
     }

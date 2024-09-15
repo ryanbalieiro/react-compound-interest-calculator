@@ -6,8 +6,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCircle, faChainBroken, faHome} from '@fortawesome/free-solid-svg-icons'
 import {Link} from "react-router-dom"
 import {Button} from "react-bootstrap"
+import {useAssets} from "/src/hooks/assets.js"
 
 const NotFoundPage = () => {
+    const assets = useAssets()
+
     return (
         <div className={`not-found-page`}>
             <PageHeader title="Not found" subtitle="Error 404"/>
@@ -24,7 +27,7 @@ const NotFoundPage = () => {
                         <p className={`text-4`}>The link you followed may be broken, or you might not have permission to access it.</p>
                     </div>
 
-                    <Link to={`/`}>
+                    <Link to={assets.resolvePath('/')}>
                         <Button className={`mt-4`}>
                             <FontAwesomeIcon icon={faHome} className={`me-2 text-5`}/>
                             Go back home

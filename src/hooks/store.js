@@ -1,4 +1,3 @@
-import {useEffect, useState} from "react"
 import {useCalculator} from "/src/hooks/calculator.js"
 
 const calculator = useCalculator()

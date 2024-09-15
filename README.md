@@ -1,4 +1,4 @@
-# <img src="public/icon.svg" height="60px" style="vertical-align: middle;"> [Compound Interest Calculator](https://ryanbalieiro.github.io/compound-interest-calculator/) 
+# <img src="public/icon.svg" height="40px"> [React Compound Interest Calculator](https://ryanbalieiro.github.io/react-compound-interest-calculator/) 
 
 A React-based tool designed to visualize the growth of investments through compound interest. 
 
@@ -10,7 +10,7 @@ This is a hypothetical scenario that starts with an initial investment of $10,00
 
 ![alt tag1](screenshots/preview.png)
 
-You can explore and play around with the calculator by accessing a live version available **[here](https://ryanbalieiro.github.io/compound-interest-calculator/)**.
+You can explore and play around with the calculator by accessing a live version available **[here](https://ryanbalieiro.github.io/react-compound-interest-calculator/)**.
 
 ## Status
 
@@ -21,7 +21,7 @@ You can explore and play around with the calculator by accessing a live version 
 
 1. Clone the repo:
 ```
-git clone https://github.com/ryanbalieiro/compound-interest-calculator
+git clone https://github.com/ryanbalieiro/react-compound-interest-calculator
 ```
 
 2. Go to the project's root folder and use npm to install all required components:

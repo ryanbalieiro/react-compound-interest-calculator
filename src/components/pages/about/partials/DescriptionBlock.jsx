@@ -1,8 +1,5 @@
 import React from 'react'
-import {useCalculator} from "/src/hooks/calculator.js"
-
 import InfoBlock from "/src/components/widgets/InfoBlock.jsx"
-import {faCode} from "@fortawesome/free-solid-svg-icons"
 
 const DescriptionBlock = () => {
     return (

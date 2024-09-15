@@ -7,11 +7,11 @@ import {faEquals, faPlus} from "@fortawesome/free-solid-svg-icons"
 function CalculatorResultSummary({total, totalContributed, totalInterest}) {
     const calculator = useCalculator()
 
-    const iconsThreshold = 9999999
+    const iconsVisibleThreshold = 9999999
 
-    const shouldShowIcons = totalContributed < iconsThreshold
-        && totalInterest < iconsThreshold
-        && total < iconsThreshold
+    const shouldShowIcons = totalContributed < iconsVisibleThreshold
+        && totalInterest < iconsVisibleThreshold
+        && total < iconsVisibleThreshold
 
     return (
         <div className="result-summary">
