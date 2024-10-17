@@ -2,20 +2,19 @@
 
 A React-based tool designed to visualize the growth of investments through compound interest. 
 
-This tool automatically calculates and compounds interest, generating comprehensive reports that feature both charts and tables. Users can easily track the estimated total growth over the years and see how the interest accumulates in relation to the amount of money they invested.
+This tool automatically calculates and compounds interest, providing detailed reports that include both charts and tables. Users can easily track their estimated total growth over the years and watch how their interest adds up alongside the money they've invested. It's a simple way to see how your investments grow
 
-## Preview
+## [Preview](https://ryanbalieiro.github.io/react-compound-interest-calculator/)
+You can explore and play around with the calculator by accessing a live version available **[here](https://ryanbalieiro.github.io/react-compound-interest-calculator/)**.
 
-This is a hypothetical scenario that starts with an initial investment of $10,000.00, with an additional contribution of $100.00 every month, at an annual interest rate of 6% over a period of 25 years:
+Below is an example scenario that starts with an initial investment of $10,000.00, with an additional contribution of $100.00 every month, at an annual interest rate of 6% over a period of 25 years:
 
 ![alt tag1](screenshots/preview.png)
 
-You can explore and play around with the calculator by accessing a live version available **[here](https://ryanbalieiro.github.io/react-compound-interest-calculator/)**.
-
 ## Status
-
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/StartBootstrap/startbootstrap-agency/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-agency.svg)](https://www.npmjs.com/package/startbootstrap-agency)
+![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
+![Version](https://img.shields.io/badge/version-1.1.0-red.svg)
+![Open Issues](https://img.shields.io/github/issues/ryanbalieiro/react-compound-interest-calculator.svg)
 
 ## Installation and deployment
 
@@ -66,4 +65,4 @@ This project was created by and is maintained by **[Ryan Balieiro](https://ryanb
 
 ## Copyright and License
 
-Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE) license.
+Code released under the [MIT](https://github.com/ryanbalieiro/react-compound-interest-calculator/blob/master/LICENSE) license.
