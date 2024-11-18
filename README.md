@@ -37,7 +37,7 @@ npm run dev
 ```js
 export default defineConfig({
   base: '/',
-  plugins: [vue()],
+  plugins: [react()],
 })
 ```
 
