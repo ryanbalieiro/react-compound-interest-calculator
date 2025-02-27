@@ -14,8 +14,6 @@ function CalculatorEvolutionTab({visible, result}) {
     const watcher = useWatcher()
 
     const isLargeScreen = watcher.isBreakpoint(watcher.Breakpoints.LG)
-
-    const maxYearsToAllowMonthDisplay = isLargeScreen ? 15 : 5
     const shouldGroupByYear = result.steps.length > 12*15 + 1
     const unit = shouldGroupByYear ? 'year' : 'month'
 

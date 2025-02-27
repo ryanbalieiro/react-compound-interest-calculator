@@ -1,4 +1,8 @@
 /** Customizing bootstrap components **/
+.bg-card-focus {
+    background-color: $card-focus-color;
+}
+
 .card {
     border-style: dotted;
     border-width: 2px;

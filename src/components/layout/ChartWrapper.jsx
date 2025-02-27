@@ -1,5 +1,4 @@
 import React from 'react'
-import Divider from "/src/components/widgets/Divider.jsx"
 
 const ChartWrapper = ({ children, legend, className }) => {
     const flexClassList = `d-flex justify-content-center align-items-center overflow-hidden h-100 w-100`
