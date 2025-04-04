@@ -5,6 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/react-compound-interest-calculator/',
   plugins: [react()],
+  build: {
+    chunkSizeWarningLimit: 500
+  },
   css: {
     preprocessorOptions: {
       scss: {

@@ -1,7 +1,7 @@
 @import 'variables';
 
 // importing bootstrap
-@import 'node_modules/bootstrap/scss/bootstrap';
+@import '/node_modules/bootstrap/scss/bootstrap';
 
 html {
     background-color: $dark;
