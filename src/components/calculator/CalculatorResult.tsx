@@ -36,7 +36,8 @@ export default function CalculatorResult({ result = undefined, className = "" } 
             <div className="calculator-result-report">
                 <TabGroup selectedTabId={activeTabId}
                           onTabSelected={(id) => { setActiveTabId(id); }}
-                          className={`mt-2`}
+                          className={`mt-1 md:mt-2`}
+                          shrinkBreakpoint={415}
                           items={[
                               {id: 0, label: strings.get("evolution"), icon: "pi pi-chart-line"},
                               {id: 1, label: strings.get("distribution"), icon: "pi pi-chart-pie"},

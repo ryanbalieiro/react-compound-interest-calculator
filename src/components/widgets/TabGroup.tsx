@@ -1,7 +1,9 @@
 import {useUtils} from "@/hooks/utils.tsx";
+import {useViewport} from "@/components/providers/ViewportProvider.tsx";
 
 interface TabGroupProps {
     items: TabProps[];
+    shrinkBreakpoint?: number;
     selectedTabId?: number;
     onTabSelected?: (id: number) => void;
     className?: string;
@@ -10,12 +12,17 @@ interface TabGroupProps {
 interface TabProps {
     id: number;
     active?: boolean;
+    shrink?: boolean;
     label: string;
     icon?: string;
     onSelect?: (id: number) => void;
 }
 
-export function TabGroup({ items, selectedTabId, onTabSelected, className }: TabGroupProps) {
+export function TabGroup({ items, selectedTabId, shrinkBreakpoint = 640, onTabSelected, className }: TabGroupProps) {
+    const viewport = useViewport();
+
+    const shouldShrink = viewport.innerWidth < shrinkBreakpoint;
+
     return (
         <div className={`
             flex flex-row ${className}
@@ -24,6 +31,7 @@ export function TabGroup({ items, selectedTabId, onTabSelected, className }: Tab
             {items.map(item => (
                 <Tab id={item.id}
                      key={item.id}
+                     shrink={shouldShrink}
                      active={item.active || item.id === selectedTabId}
                      label={item.label}
                      icon={item.icon}
@@ -36,7 +44,7 @@ export function TabGroup({ items, selectedTabId, onTabSelected, className }: Tab
     );
 }
 
-function Tab({ id, label, icon, active = false, onSelect }: TabProps) {
+function Tab({ id, label, icon, shrink = false, active = false, onSelect }: TabProps) {
     const utils = useUtils();
 
     return (
@@ -48,8 +56,8 @@ function Tab({ id, label, icon, active = false, onSelect }: TabProps) {
                     ${utils.strIf(!active, 'bg-background text-secondary-30 hover:bg-muted/10 hover:text-primary')}
                     ${utils.strIf(active, 'bg-primary text-white')}
                 `}>
-            {icon && <i className={`${icon} md:mr-2`}/>}
-            <span className={`hidden md:inline`}
+            {icon && <i className={`${icon} ${shrink ? 'mr-0' : 'mr-2'}`}/>}
+            <span className={`${shrink ? 'hidden' : 'md-inline'}`}
                   dangerouslySetInnerHTML={{__html: label}}/>
         </button>
     );
