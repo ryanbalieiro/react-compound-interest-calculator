@@ -40,8 +40,8 @@ npm run dev
 4. For a production build, go to `vite.config.js` and configure the base directory for your application. This setting establishes the primary path under which your website will be hosted.
 ```js
 export default defineConfig({
-  base: '/',
-  plugins: [react()],
+    base: '/',
+    plugins: [react()],
 })
 ```
 
