@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import "primeicons/primeicons.css";
+
+@theme {
+    --color-primary: #960808;
+    --color-primary-10: #b30a0a;
+    --color-primary-20: #f20e0e;
+    --color-primary-30: #ff5555;
+    --color-primary-40: #ff6c6c;
+    --color-primary-50: #ff8686;
+    --color-primary-60: #fd9d9d;
+    --color-primary-70: #fdb9b9;
+    --color-primary-80: #fdcccc;
+    --color-primary-90: #fddfdf;
+    --color-primary-100: #FFFFFF;
+
+    --color-secondary: #a3a8ad;
+    --color-secondary-10: #b3b8bd;
+    --color-secondary-20: #c3c8ce;
+    --color-secondary-30: #d3d8dd;
+    --color-secondary-40: #dee2e6;
+    --color-secondary-50: #e9ecef;
+    --color-secondary-60: #ebebec;
+    --color-secondary-70: #f2f2f2;
+    --color-secondary-80: #f7f7f7;
+    --color-secondary-90: #fcfcfc;
+    --color-secondary-100: #FFFFFF;
+
+    --color-background: #FFFFFF;
+    --color-muted: #777777;
+    --color-muted-accent: #555555;
+    --color-muted-emphasis: #333333;
+    --color-success: #2e904d;
+    --color-dark: #212529;
+    --color-dark-emphasis: #1c1f24;
+    --color-dark-emphasis-accent: #141619;
+
+    --font-lato: 'Lato', sans-serif;
+    --font-literata: 'Literata', serif;
+    --font-ubuntu: 'Ubuntu', sans-serif;
+}
+
+html {
+    @apply font-lato;
+}
+
+body {
+    @apply bg-dark-emphasis;
+}

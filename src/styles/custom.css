@@ -1,0 +1,63 @@
+a.custom-primary-link {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+a.custom-primary-link:hover {
+    color: var(--color-primary-10);
+}
+
+a.custom-primary-light-link {
+    color: var(--color-primary-30);
+    text-decoration: none;
+}
+
+a.custom-primary-light-link:hover {
+    color: var(--color-primary-40);
+}
+
+span.badge {
+    color: white;
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+table.custom-table-stylized {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.custom-table-stylized th,
+table.custom-table-stylized td {
+    border: 1px solid var(--color-secondary-40);
+    padding: 7px 12px;
+}
+
+table.custom-table-stylized thead tr:first-child th,
+table.custom-table-stylized thead tr:first-child td {
+    border-top: 0;
+}
+
+table.custom-table-stylized thead tr {
+    background-color: var(--color-secondary-100);
+}
+
+table.custom-table-stylized tbody tr:nth-child(odd) {
+    background-color: var(--color-secondary-70);
+}
+
+table.custom-table-stylized tbody tr:nth-child(even) {
+    background-color: var(--color-secondary-90);
+}
+
+::-moz-selection {
+    color: var(--color-dark-emphasis-accent);
+    background: var(--color-primary-70);
+}
+
+::selection {
+    color: var(--color-dark-emphasis-accent);
+    background: var(--color-primary-70);
+}
