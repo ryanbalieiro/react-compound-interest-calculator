@@ -52,5 +52,5 @@ function Tab({ id, label, icon, active = false, onSelect }: TabProps) {
             <span className={`hidden md:inline`}
                   dangerouslySetInnerHTML={{__html: label}}/>
         </button>
-    )
+    );
 }

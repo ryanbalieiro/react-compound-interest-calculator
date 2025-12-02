@@ -41,5 +41,5 @@ export default function SimpleButton({ className = "", color = "primary", icon =
             {icon && (<i className={`${icon} me-2`}/>)}
             {label && (<span dangerouslySetInnerHTML={{__html: label}}/>)}
         </button>
-    )
+    );
 }

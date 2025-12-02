@@ -23,8 +23,12 @@ export const useNavigation = () => {
     };
 
     const _parseLink = (link: { label?: string; href: string; icon: string; key?: string; }) => {
+        const href = link.href.startsWith("http") ?
+            link.href :
+            resolvePath(link.href);
+
         const parsedLink = {
-            href: basePath + link.href,
+            href: href,
             icon: link.icon,
             label: ""
         };
@@ -36,9 +40,9 @@ export const useNavigation = () => {
     };
 
     const resolvePath = (relativePath: string):string => {
-        const BASE_URL = import.meta.env.BASE_URL.replace(/\/$/, '');
-        let path = BASE_URL + relativePath;
-        path = path.replaceAll("//", "/");
+        let path = basePath + "/" + relativePath;
+        path = path.replaceAll("///", "/")
+            .replaceAll("//", "/");
         return path;
     };
 

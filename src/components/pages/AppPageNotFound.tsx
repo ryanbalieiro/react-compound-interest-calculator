@@ -3,9 +3,11 @@ import PageWrapper from "@/components/pages/partials/PageWrapper.tsx";
 import PageHeader from "@/components/pages/partials/PageHeader.tsx";
 import PageSection from "@/components/pages/partials/PageSection.tsx";
 import {Link} from "react-router-dom";
+import {useNavigation} from "@/hooks/navigation.tsx";
 
 export default function AppPageNotFound() {
     const strings = useStrings();
+    const navigation = useNavigation();
 
     return (
         <PageWrapper>
@@ -27,7 +29,7 @@ export default function AppPageNotFound() {
                            dangerouslySetInnerHTML={{__html: strings.get("error_page_msg_unavailable_description")}}/>
                     </div>
 
-                    <Link to="/"
+                    <Link to={navigation.resolvePath('/')}
                           className="px-6 py-3 bg-primary text-white rounded-xl shadow hover:bg-primary-10 transition">
                         <i className="pi pi-home me-3"/>
                         {strings.get("go_back_home")}

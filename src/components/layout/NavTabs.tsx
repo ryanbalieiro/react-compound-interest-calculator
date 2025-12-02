@@ -1,6 +1,7 @@
 import {useNavigation} from "@/hooks/navigation.tsx";
 import {useViewport} from "@/components/providers/ViewportProvider.tsx";
 import {Link, useLocation} from "react-router-dom";
+import type {MouseEvent} from "react";
 
 export default function NavTabs() {
     const viewport = useViewport();
@@ -40,9 +41,15 @@ function NavTab({href = "", label = "", icon = ""}) {
         'text-primary-60' :
         '';
 
+    const _onClick = (_: MouseEvent<HTMLAnchorElement>) => {
+        if(href !== location.pathname) return;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
         <li className={`flex-1 h-[75px] text-center text-white`}>
             <Link to={href}
+                  onClick={_onClick}
                   className={`h-[75px] flex flex-col gap-2 justify-center items-center w-full ${linkClass}`}>
                 <i className={`${icon} text-xl`} />
                 <span className={`block text-xs mb-2 ${spanClass}`}>{label}</span>

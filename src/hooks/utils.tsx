@@ -10,13 +10,11 @@ export const useUtils = () => {
             { value: 1E18, symbol: "E" },
         ];
 
-        const item = abbreviations.slice().reverse().find(function(item) {
-            return number >= item.value;
-        })
+        const item = [...abbreviations].reverse().find(a => number >= a.value);
 
-        return item ?
-            (number / item.value).toFixed(1).replace(/\.0$/, '') + item.symbol :
-            "0";
+        return item
+            ? `${(number / item.value).toFixed(1).replace(/\.0$/, '')}${item.symbol}`
+            : "0";
     };
 
     const addThousandsSeparator = (numberString: string):string => {
